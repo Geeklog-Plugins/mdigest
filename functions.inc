@@ -102,25 +102,10 @@ function plugin_getadminoption_mdigest()
             return array ($LANG_MDIGEST['mdigest'],
                       $_CONF['site_admin_url'] . '/plugins/mdigest/index.php',
                       $count);
-        } else {
-            $js = " $('.blink').each(function() {
-                var elem = $(this);
-                setInterval(function() {
-                    if (elem.css('visibility') == 'hidden') {
-                        elem.css('visibility', 'visible');
-                    } else {
-                        elem.css('visibility', 'hidden');
-                    }    
-                }, 500);
-            });
-            ";
-            
-            $_SCRIPTS->setJavaScriptLibrary('jquery');
-            $_SCRIPTS->setJavaScript($js, true);
-            
-            return array ('<strong><span class="blink">' . $LANG_MDIGEST['mdigest'] . '</span></strong>',
+        } else {            
+            return array ('<span style="color:red">' . $LANG_MDIGEST['mdigest'] . '</span>',
                       $_CONF['site_admin_url'] . '/plugins/mdigest/index.php',
-                      '<strong>' .  $count . '</strong>');
+                      $count);
         }
     }	
 }
