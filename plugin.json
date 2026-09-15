@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "id": "mdigest",
+  "name": "mdigest",
+  "icon": "admin/images/mdigest.png",
+  "requires": {
+    "geeklog": "2.0.0"
+  }
+}
